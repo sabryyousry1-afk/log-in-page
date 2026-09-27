@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+   <meta charset="UTF-8">
+   <title>login</title>
+
+</head>
+ <meta name="description" content="this is log in">
+
+<body>
+<div class="box">
+<div>
+    <h1><strong>Log in</strong></h1>
+    <h3><strong>welcome to login page</strong></h3>
+</div>
+<form>
+    <div>
+        <label for="username"><strong>Username</strong></label>
+        <input type="text" id="username" required placeholder="Username" class="input" autofocus>
+    </div>
+    
+    <div>
+        <label for="password"><strong>password</strong></label>
+        <input type="password" id="password" required placeholder="password" class="input" minlength="6" maxlength="20"> 
+    </div> 
+    
+    <div>
+        <label for="email"><strong>email</strong></label>
+        <input type="email" id="email" required placeholder="write your email" class="input"> 
+    </div>
+    <div class="radio-group">
+    <div class="radio-row">
+        <input type="radio" name="os" value="windows" id="win" class="input-radio" checked>
+        <label for="win"><strong>windows</strong></label>
+    </div>
+    <div class="radio-row">
+        <input type="radio" name="os" value="mac" id="mac" class="input-radio">
+        <label for="mac"><strong>mac</strong> </label>
+    </div> 
+    <div class="radio-row">
+        <input type="radio" name="os" value="linux" id="lin" class="input-radio">
+        <label for="lin"><strong>linux</strong></label>
+    </div>  
+    </div>
+    <div class="buttons">   
+        <button type="submit"><strong>SAVE</strong></button> 
+        <button type="reset" class="reset-btn"><strong>RESET</strong></button>
+    </div> 
+    <p id="msg"></p>
+</form>
+</div>
+ <script>
+    document.querySelector("form").addEventListener("submit",function(e){
+        e.preventDefault();
+        const msg = document.getElementById("msg");
+        msg.textContent = "Saved Successfully"
+        msg.className="show";
+        setTimeout(function() {msg.className=";"},2000);
+    });
+ </script>
+</body>
+
+</html>
