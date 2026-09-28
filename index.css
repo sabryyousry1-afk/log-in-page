@@ -1,0 +1,151 @@
+ div.box{
+    background: #fff;
+    border-radius: 16px ;
+    width: 340px;
+    padding: 32px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+ }
+
+body{
+    font-family: "segoe ui", Tahoma, sans-serif;
+    background: linear-gradient(45deg, #1e3a8a, #6d28d9, #2563eb, #9333ea);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+input{
+    border: 1px solid #cbd5e1;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: transform 0.2s, border-color 0.3s;
+}
+label{
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: 600;
+}
+label.radio{
+    display: inline;
+}
+button{
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #6d28d9;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.3s;
+}
+button:hover{
+    background: #5b21b6;
+}
+input:focus{
+    outline: none;
+    border-color: #6d28d9;
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.2);
+}
+.input-radio{
+    width: auto;
+    padding: 0;
+    margin-right: 8px;
+
+}
+.radio-row{
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+.radio-row label{
+    margin: 0;
+}
+
+input{
+    box-sizing: border-box;
+}
+.radio-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+h3{
+    text-align: center;
+    font-size: 16px;
+    color: #64748b;
+}
+h1{
+    text-align: center ;
+    color: #6d28d9;
+    margin-top: 0;
+    text-transform: linear-gradient(45deg, #1e3a8a, #6d28d9, #2563eb, #9333ea);
+    
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.buttons button{
+    flex: 1;
+    margin: 0;
+}
+.reset-btn{
+    background: #e2e8f0;
+    color: #334155;
+
+}
+.reset-btn:hover{
+    background: #cbd5e1;
+    
+}
+::placeholder{
+    color:#94a3b8;
+
+
+}
+#msg{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    transform: translate(50%, -50%);
+    background: #16a34a;
+    color: #fff;
+    padding: 24px 50px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+#msg.show{
+    display: block;
+    animation: pop 0.4 ease;
+    @keyframes pop{
+        from {opacity: 0; transform: translate(50%, -50%) scale(0.5);}
+        to {opacity: 1;transform: translate(50%, -50%);scale(1);}
+    }}
+@keyframes gradientMove{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+.input.radio-group{
+    transition: transform 0.2s, border-color 0.3s;
+}
+
+.input{
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+.input:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8);
+}
